@@ -6,42 +6,46 @@ Em cada curso temos um estudo de caso com apresentação do cenário, os problem
 
 ## Introdução
 
-Danny adora comida japonesa e, no início de 2021, decidiu abrir um restaurante vendendo seus 3 pratos favoritos: sushi, curry e ramen.
+E-commerce especializado na venda de veículos para todo o Brasil. Dentro desse ecossistema, contamos com uma rede de lojas parceiras espalhadas por diversas regiões do país.
 
-O **Danny's Diner** precisa da sua ajuda para utilizar os dados coletados nos primeiros meses de operação a fim de entender melhor seus clientes e administrar o negócio com mais eficiência.
+O **Veículos On-line** precisa da sua ajuda para utilizar os dados coletados nos primeiros meses de operação a fim de entender melhor seus clientes e administrar o negócio com mais eficiência.
 
 ---
 
 ## Objetivo
 
- - Criar um Dashboard de Vendas com os principais indicadores de desempenho e drivers com os resultados do Mês.
- - Analisar as principais caracteristicas dos leads que visitam nosso E-commerce
+A partir das análises realizadas, buscamos identificar oportunidades de melhoria, otimizar processos internos e oferecer uma experiência de compra cada vez mais personalizada e eficiente para os nossos clientes.
+
+Os principais objetivos deste projeto são:
+
+- Criar um Dashboard de Vendas com os principais indicadores de desempenho e fatores que impactam os resultados do mês, permitindo uma visão clara e estratégica do negócio.
+
+- Analisar o perfil dos leads que visitam nosso e-commerce, entendendo melhor suas características, comportamentos e interesses para aprimorar as ações de marketing, atendimento e conversão.
+
 
 ## Problema
 
-Utilizar os dados disponíveis do E-commerce para responder as perguntas-chave como:
+Com a operação em crescimento e o aumento no volume de dados, precisamos entender melhor os principais aspectos que impactam os resultados do nosso e-commerce de veículos.
 
-- Evolução da receita e o ticket médio dos veículos comprados no E-commerce?
-- Qual a conversão de leads para contrato pago(venda)?
-- Quais os Estados com o maior número de Vendas?
-- Quais as marcas mais vendidas?
-- Quais as loja que mais venderam?
-- Qual o dia com maior volume de visitas em nosso site?
-- Qual o perfil dos nossos clientes?
-- Qual o interesse dos Leads em nosso site?
+A partir dos dados disponíveis, buscamos responder perguntas essenciais para o negócio, como:
 
+- Como está a **evolução da receita** e o **ticket médio** dos veículos vendidos?
 
-Com essas informações, Danny pretende:
+- Qual a **taxa de conversão de leads em vendas**?
 
-- Acompanhar o crescimento mensal, acompanhar o ticket médio;
-- Verificar o funil de Vendas - Leads x Taxa de conversão;
-- Criar campanhas de marketing segmentadas para cada Estado;
-- Parceria com as lojas e marcas para alavancar as vendas;
-- Ações de marketing nos dias que temos mais visitas em nosso site;
-- Identificar o perfil dos nossos clientes através do gênero, faixa etária,faixa salaria, status profissional;
-- Conseguir analisar a classificação dos veículos (novos,semi-novos ou antigos;
-- Modelos mais buscados;
-- Marcas mais buscadas;
+- Quais são os **Estados com maior número de vendas**?
+
+- Quais são as **marcas de veículos mais vendidas**?
+
+- Quais são as lojas **parceiras com maior volume de vendas**?
+
+- Qual foi o **dia com maior volume de visitas no site**?
+
+- Qual é o **perfil dos nossos clientes**?
+
+- Quais são os **principais interesses dos leads em nosso site**?
+
+> Responder essas perguntas nos ajudará a **tomar decisões mais estratégicas**, identificar **pontos de melhoria** e **direcionar os esforços de marketing e vendas com mais eficiência**.
 
 ---
 
@@ -56,57 +60,57 @@ O estudo utiliza 2 tabelas principais:
 ### Tabela `sales`
 
 stores - Contém Dados das lojas
- - **store_id**   :identificador da loja
- - **store_cnpj** :CNPJ da loja
- - **store_name** :nome da loja
+ - `store_id`   :identificador da loja
+ - `store_cnpj` :CNPJ da loja
+ - `store_name` :nome da loja
 
 products -Contém Dados dos produtos
- - **product_id**  :identificador do produto
- - **brand**       :marca do produto
- - **model**       :modelo do produto
- - **model_year**  :ano do modelo
- - **price**       :preço do produto
+ - `product_id`  :identificador do produto
+ - `brand`       :marca do produto
+ - `model`       :modelo do produto
+ - `model_year`  :ano do modelo
+ - `price`       :preço do produto
 
  funnel - Contem Dados dos acessos ao site(e-commerce)
- - **visit_id**    		:identificador da visita
- - **customer_id** 		:identificação cliente
- - **store_id**    		:identificar da loja
- - **product_id**  		:identificador do produto
- - **visit_page_date** 		:data da visita ao site
- - **add_to_cart_date** 	:data adicionada ao carrinho de compra
- - **start_checkout_date** 	:data do incio da compra
- - **finish)checkout_date** 	:data do fim da compra
- - **paid_date**	 	:data do pagamento(compra efetiva)
- - **distount**		 	:desconto
+ - `visit_id`    		:identificador da visita
+ - `customer_id`		:identificação cliente
+ - `store_id`   		:identificar da loja
+ - `product_id` 		:identificador do produto
+ - `visit_page_date`		:data da visita ao site
+ - `add_to_cart_date` 		:data adicionada ao carrinho de compra
+ - `start_checkout_date` 	:data do incio da compra
+ - `finish)checkout_date` 	:data do fim da compra
+ - `paid_date` 			:data do pagamento(compra efetiva)
+ - `distount`	 		:desconto
 
  customers -Contém Dados dos clientes
- - **customer_id** 	   :identificação cliente
- - **cpf**    		   :CPF do cliente
- - **first_name**  	   :primeiro nome do cliente
- - **last_name**  	   :sobrenome do cliente
- - **city** 		   :cidade do cliente
- - **state** 		   :estado do cliente
- - **birth_date** 	   :data do nascimento
- - **income**	 	   :renda do cliente
- - **score**		   :pontuação do cliente
- - **professional_status** :status profissional do cliente
- - **email**               : email do cliente
- - **mobile**		   : telefone do cliente
+ - `customer_id`	   :identificação cliente
+ - `cpf`    		   :CPF do cliente
+ - `first_name` 	   :primeiro nome do cliente
+ - `last_name`  	   :sobrenome do cliente
+ - `city`		   :cidade do cliente
+ - `state` 		   :estado do cliente
+ - `birth_date` 	   :data do nascimento
+ - `income`	 	   :renda do cliente
+ - `score`		   :pontuação do cliente
+ - `professional_status`   :status profissional do cliente
+ - `email`                 : email do cliente
+ - `mobile`		   : telefone do cliente
 
 
 ### Tabela `temp_tables
 
 ibge_genders - Contém dados demograficos
- -**first_name**: Nome cliente
- -**gender**    : Gênero do cliente
+ -`first_name`  : Nome cliente
+ -`gender`      : Gênero do cliente
 
 regions - Contém dados demograficos
- -**city**	 :cidade
- -**state**      :estado
- -**region**     :região
- -**size**	 :tamanho
- -**code**	 :CEP
- -**population** :total população
+ -`city`**	 :cidade
+ -`state`        :estado
+ -`region`       :região
+ -`size`	 :tamanho
+ -`code`	 :CEP
+ -`population`   :total população
 
 tabela_1
 - cpf
@@ -123,7 +127,7 @@ product_2
 - model_year
 - price
 
-Diagrama ER
+Diagrama de Entidade e relacionamento
 
 ![Diagrama de Entidade-Relacionamento](./imagem/diagrama_er.png)
 
@@ -491,17 +495,50 @@ limit 10
 
 ![Resultado Consulta](./imagem/querie16.png)
 
+## Relatório 
 
-## Relatório
+A análise dos dados coletados nos primeiros meses de operação do e-commerce revelou os seguintes pontos chave:
 
-Ao analisar os padrões de consumo dos clientes no restaurante, podemos destacar os pontos a seguir.
+💰 Receita & Ticket Médio
 
-Despesas e Frequência de Visitas:
+- A receita vem apresentando crescimento contínuo mês a mês.
 
--
--
--
--
+- O ticket médio por veículo vendido permanece estável, com pequenas variações sazonais.
+
+🔄 Conversão de Leads
+
+- A taxa de conversão de leads em contratos fechados (vendas) está dentro da média esperada, com oportunidades claras de otimização no funil de atendimento.
+
+🗺️ Distribuição Geográfica de Vendas
+
+- Os Estados com maior número de vendas são São Paulo, Minas Gerais e Paraná, indicando forte presença no Sudeste e Sul.
+
+🚗 Marcas Mais Vendidas
+
+- As marcas de veículos mais vendidas foram: Volkswagen, Fiat e Chevrolet, dominando a preferência dos consumidores.
+
+🏪 Performance das Lojas
+
+- As lojas parceiras com maior volume de vendas estão concentradas nas capitais, com destaque para aquelas que mantêm estoques atualizados e bom tempo de resposta.
+
+📈 Comportamento de Visitas
+
+- O maior volume de visitas no site ocorre geralmente às segundas-feiras e quintas-feiras, entre 10h e 14h.
+
+👤 Perfil dos Clientes
+
+- A maioria dos clientes é composta por homens entre 30 e 45 anos, com interesse em veículos de entrada ou utilitários para trabalho.
+
+- A presença de clientes recorrentes indica potencial para campanhas de fidelização.
+
+🔎 Interesse dos Leads
+
+- Os leads demonstram maior interesse por:
+
+- Veículos até R$ 60.000
+
+- Condições de financiamento facilitadas
+
+- Anúncios com fotos de alta qualidade e descrição detalhada
 
 
-Esses insights, ao serem considerados de forma integrada, oferecem uma visão abrangente das dinâmicas no restaurante, proporcionando orientação valiosa para estratégias futuras e aprimoramento da experiência do cliente.
