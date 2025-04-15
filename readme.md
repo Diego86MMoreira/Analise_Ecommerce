@@ -49,7 +49,7 @@ Com essas informações, Danny pretende:
 
 A condução da análise foi realizada com PostgreSQL utilizando o PgAdmin.
 
-Os scipts de criação e inserção de dados estão no arquivo [tabelas.sql[(./tabelas.sql).
+Os scipts de criação e inserção de dados estão no arquivo [tabelas.sql](./tabelas.sql).
 
 O estudo utiliza 2 tabelas principais:
 
@@ -132,7 +132,7 @@ Diagrama ER
 
 ## Análises
 
-Os scripts das análises podem ser acessados no arquivo [analise.sql](./analise.sql).
+Os scripts das análises podem ser acessados no arquivo [analises.sql](./analises.sql).
 
 
 - Qual o total de Leads?
