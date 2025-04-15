@@ -126,8 +126,10 @@ Diagrama de Entidade e relacionamento
 Os scripts das análises podem ser acessados no arquivo [analises.sql](./analises.sql).
 
 
-- Qual o total de Leads?
-> 
+- Qual o total de Visitas?
+
+> Total de visitas ao site entre setembro/2020 e agosto/2021: 31.610 visitas.
+
 ```sql
 
 select
@@ -142,7 +144,11 @@ order by visit_page_month
 ![Resultado Consulta](./imagem/querie1.png)
 
 - Qual o total de Vendas e o Valor da Receita?
-> 
+
+> Total de unidades vendidas no site entre setembro/2020 e agosto/2021: 3.788.
+> Receita Total no período entre setembro/2020 e agosto/2021: R$ 215.027.691,33
+
+
 ```sql
 
 select
@@ -164,7 +170,10 @@ order by paid_month
 
 
 - Qual a taxa de conversão e a taxa do Ticket Médio?
-> 
+
+> Taxa média de conversão de 11,99%:indicando que cerca de 1 em cada 9 visitantes concluiu uma compra. 
+> O ticket médio das vendas no período foi de aproximadamente R$ 56.750,00 por venda.
+
 ```sql
 
 with
@@ -206,7 +215,10 @@ on leads.visit_page_month = paid_month
 ![Resultado Consulta](./imagem/querie4.png)
 
 - Estados que mais venderam?
-> 
+
+> São Paulo (734 unidades), Minas Gerais (142 unidades) e Santa Catarina são os 3 principais Estados
+com o maior número de vendas
+
 ```sql
 select
 	'Brazil' as país,
@@ -220,12 +232,13 @@ where paid_date between '2021-08-01' and '2021-08-31'
 group by país, estado
 order by "vendas (#)" desc
 
-
 ```
 ![Resultado Consulta](./imagem/querie6.png)
 
 - Marcas que mais venderam?
-> 
+
+> Fiat (248 unidades), Chevrolet (237 unidades) e Volkswagen (193 unidades) são as 3 principais marcas mais vendidas.
+
 ```sql
 select
 	pro.brand as marca,
@@ -243,7 +256,7 @@ limit 10
 ![Resultado Consulta](./imagem/querie7.png)
 
 - Lojas que mais venderam?
-> 
+
 ```sql
 
 select
@@ -498,11 +511,18 @@ A análise dos dados coletados nos primeiros meses de operação do e-commerce r
 
 ###  🗺️ Distribuição Geográfica de Vendas
 
-- Os Estados com maior número de vendas são São Paulo, Minas Gerais e Paraná, indicando forte presença no Sudeste e Sul.
+- Analisando a distribuição geográfica das vendas, destacam-se três estados com maior volume de unidades comercializadas. 
+São Paulo lidera com 734 vendas, seguido por Minas Gerais com 142 unidades e Santa Catarina, q
+ue também aparece entre os principais estados em número de vendas. 
+Esses resultados reforçam a forte presença do nosso e-commerce nas regiões Sudeste e Sul do Brasil, evidenciando oportunidades
+de fortalecimento da atuação nessas localidades, bem como a possibilidade de expansão estratégica para outras regiões com potencial de crescimento.
 
 ###  🚗 Marcas Mais Vendidas
 
-- As marcas de veículos mais vendidas foram: Volkswagen, Fiat e Chevrolet, dominando a preferência dos consumidores.
+- Entre as marcas mais vendidas no e-commerce, Fiat se destaca com 248 unidades comercializadas, seguida de perto pela Chevrolet com 237 unidades
+ e pela Volkswagen com 193 unidades. Esses números indicam uma forte preferência dos consumidores por montadoras tradicionais e 
+consolidadas no mercado brasileiro, o que pode orientar ações de estoque, marketing e negociação com parceiros estratégicos.
+
 
 ###  🏪 Performance das Lojas
 
