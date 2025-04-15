@@ -98,34 +98,21 @@ products -Contém Dados dos produtos
  - `mobile`		   : telefone do cliente
 
 
-### Tabela `temp_tables
+### Tabela `temp_tables`
 
 ibge_genders - Contém dados demograficos
- -`first_name`  : Nome cliente
- -`gender`      : Gênero do cliente
+
+-`first_name`  : Nome cliente
+-`gender`      : Gênero do cliente
 
 regions - Contém dados demograficos
+
  -`city`**	 :cidade
  -`state`        :estado
  -`region`       :região
  -`size`	 :tamanho
  -`code`	 :CEP
  -`population`   :total população
-
-tabela_1
-- cpf
-- name
-
-tabela_2
-- cpf
-- state
-
-product_2
-- product_id
-- brand
-- model
-- model_year
-- price
 
 Diagrama de Entidade e relacionamento
 
@@ -499,39 +486,39 @@ limit 10
 
 A análise dos dados coletados nos primeiros meses de operação do e-commerce revelou os seguintes pontos chave:
 
-💰 Receita & Ticket Médio
+### 💰 Receita & Ticket Médio
 
 - A receita vem apresentando crescimento contínuo mês a mês.
 
 - O ticket médio por veículo vendido permanece estável, com pequenas variações sazonais.
 
-🔄 Conversão de Leads
+###  🔄 Conversão de Leads
 
 - A taxa de conversão de leads em contratos fechados (vendas) está dentro da média esperada, com oportunidades claras de otimização no funil de atendimento.
 
-🗺️ Distribuição Geográfica de Vendas
+###  🗺️ Distribuição Geográfica de Vendas
 
 - Os Estados com maior número de vendas são São Paulo, Minas Gerais e Paraná, indicando forte presença no Sudeste e Sul.
 
-🚗 Marcas Mais Vendidas
+###  🚗 Marcas Mais Vendidas
 
 - As marcas de veículos mais vendidas foram: Volkswagen, Fiat e Chevrolet, dominando a preferência dos consumidores.
 
-🏪 Performance das Lojas
+###  🏪 Performance das Lojas
 
 - As lojas parceiras com maior volume de vendas estão concentradas nas capitais, com destaque para aquelas que mantêm estoques atualizados e bom tempo de resposta.
 
-📈 Comportamento de Visitas
+###  📈 Comportamento de Visitas
 
 - O maior volume de visitas no site ocorre geralmente às segundas-feiras e quintas-feiras, entre 10h e 14h.
 
-👤 Perfil dos Clientes
+###  👤 Perfil dos Clientes
 
 - A maioria dos clientes é composta por homens entre 30 e 45 anos, com interesse em veículos de entrada ou utilitários para trabalho.
 
 - A presença de clientes recorrentes indica potencial para campanhas de fidelização.
 
-🔎 Interesse dos Leads
+###  🔎 Interesse dos Leads
 
 - Os leads demonstram maior interesse por:
 
