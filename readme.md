@@ -148,7 +148,7 @@ order by visit_page_month
 - Qual o total de Vendas e o Valor da Receita?
 
 > Total de unidades vendidas no site entre setembro/2020 e agosto/2021: 3.788.
-> Receita Total no período entre setembro/2020 e agosto/2021: R$ 215.027.691,33
+  Receita Total no período entre setembro/2020 e agosto/2021: R$ 215.027.691,33
 
 
 ```sql
@@ -259,6 +259,9 @@ limit 10
 
 - Lojas que mais venderam?
 
+> Kyoko Cleide (18 unidades), Claudineo Jozeane (15 unidades)e Gerrivaldo Rosielen (10 unidades) são as 3 principais lojas 
+com maior destque de vendas.
+
 ```sql
 
 select
@@ -277,7 +280,9 @@ limit 10
 ![Resultado Consulta](./imagem/querie8.png)
 
 - Qual o dia da semana com maior volume de visitas em nosso site?
-> 
+
+> Segunda feira é o dia da semana com maior número de acessos em nosso site. 
+
 ```sql
 select
 	extract('dow' from visit_page_date) as dia_semana,
@@ -303,7 +308,9 @@ order by dia_semana
 
 - Gênero dos Leads?
 
-> 
+> Mulheres 15.106 cadastradas em nosso site representando 60,2% já os homens com 10.003
+cadastrados representando 39,8%. 
+ 
 ```sql
 select
 	case
@@ -352,7 +359,9 @@ order by "leads (%)"
 
 - Faixa Etária dos Leads?
 
-> 
+> A faixa etaria com o maior número de acesso em nosso base representando 44% estão entre os 
+20 e 40 anos.
+
 ```sql
 SELECT
   CASE
@@ -372,8 +381,7 @@ ORDER BY "faixa etária" DESC;
 ![Resultado Consulta](./imagem/querie12.png)
 
 - Faixa Salarial dos Leads?
-
-> 
+ 
 ```sql
 select
 	case
@@ -401,7 +409,6 @@ order by "ordem" desc
 
 - Classificação dos veículos?
 
-> 
 ```sql
 with
 	classificacao_veiculos as (
@@ -432,7 +439,6 @@ group by "classificação do veículo"
 
 - Idade dos veículos?
 
-> 
 ```sql
 with
 	faixa_de_idade_dos_veiculos as (
@@ -478,7 +484,6 @@ order by ordem
 
 - Veículos mais visitados em nosso site por marca/modelo?
 
-> 
 ```sql
 select
 	pro.brand,
@@ -503,9 +508,9 @@ A análise dos dados coletados nos primeiros meses de operação do e-commerce r
 
 ### 💰 Receita & Ticket Médio
 
-- A receita vem apresentando crescimento contínuo mês a mês.
+> - Taxa média de conversão de 11,99%: indicando que cerca de 1 em cada 9 visitantes concluiu uma compra. 
+- O ticket médio das vendas no período foi de aproximadamente R$ 56.750,00 por venda.
 
-- O ticket médio por veículo vendido permanece estável, com pequenas variações sazonais.
 
 ###  🔄 Conversão de Leads
 
@@ -528,26 +533,25 @@ consolidadas no mercado brasileiro, o que pode orientar ações de estoque, mark
 
 ###  🏪 Performance das Lojas
 
-- As lojas parceiras com maior volume de vendas estão concentradas nas capitais, com destaque para aquelas que mantêm estoques atualizados e bom tempo de resposta.
+- As lojas parceiras com maior volume de vendas estão concentradas no sudeste.
 
 ###  📈 Comportamento de Visitas
 
-- O maior volume de visitas no site ocorre geralmente às segundas-feiras e quintas-feiras, entre 10h e 14h.
+- Segunda - feira é o dia com maior número de acesso ao nosso site, representando
+aproximadamente 17,7% do total.
+- Este dado indica que há um dia com maior engajamento por parte dos usuários.
 
 ###  👤 Perfil dos Clientes
 
-- A maioria dos clientes é composta por homens entre 30 e 45 anos, com interesse em veículos de entrada ou utilitários para trabalho.
-
-- A presença de clientes recorrentes indica potencial para campanhas de fidelização.
+- O perfil dos clientes revela uma predominância do público feminino, que representa cerca de 60,2% da base total,
+  com 15.106 mulheres cadastradas. Já os homens somam 10.003, correspondendo a 39,8% do total de 25.109 clientes.
 
 ###  🔎 Interesse dos Leads
 
 - Os leads demonstram maior interesse por:
 
-- Veículos até R$ 60.000
+- Veículos da marca AUDI.
 
-- Condições de financiamento facilitadas
+- Modelo AUDI A3
 
-- Anúncios com fotos de alta qualidade e descrição detalhada
-
-
+- Esses números indicam uma forte presença da marca entre os leads, sugerindo preferência por veículos que aliam design, desempenho e tecnologia em diferentes categorias.
