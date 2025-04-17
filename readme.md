@@ -102,17 +102,19 @@ products -Contém Dados dos produtos
 
 ibge_genders - Contém dados demograficos
 
--`first_name`  : Nome cliente
--`gender`      : Gênero do cliente
+- `first_name`  : Nome cliente
+- `gender`      : Gênero do cliente
 
 regions - Contém dados demograficos
 
- -`city`**	 :cidade
- -`state`        :estado
- -`region`       :região
- -`size`	 :tamanho
- -`code`	 :CEP
- -`population`   :total população
+- `city`**	 :cidade
+- `state`        :estado
+- `region`       :região
+- `size`	 :tamanho
+- `code`	 :CEP
+- `population`   :total população
+
+
 
 Diagrama de Entidade e relacionamento
 
